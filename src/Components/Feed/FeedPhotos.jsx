@@ -21,18 +21,18 @@ const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
 
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
+  if (data && data.length < 1 && user !== 0)
+    return <p>Nenhuma foto foi postada.</p>;
   if (data)
     return (
       <ul className={`${styles.feed} animeLeft`}>
-        {data
-          ? data.map((photo) => (
-              <FeedPhotosItem
-                key={photo.id}
-                photo={photo}
-                setModalPhoto={setModalPhoto}
-              />
-            ))
-          : null}
+        {data.map((photo) => (
+          <FeedPhotosItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
+        ))}
       </ul>
     );
   else return null;
