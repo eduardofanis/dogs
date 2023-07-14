@@ -15,13 +15,12 @@ import NotFound from "./Components/Interface/NotFound";
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/projeto-dogs">
         <UserStorage>
           <Header />
           <main className="AppBody">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="projeto-dogs" element={<Home />} />
+              <Route exact path="/" element={<Home />} />
               <Route path="login/*" element={<Login />} />
               <Route
                 path="conta/*"
