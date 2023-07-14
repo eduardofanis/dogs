@@ -43,6 +43,9 @@
   .graph {
     grid-template-columns: 1fr;
   }
+  .total {
+    grid-column: 1 / 3;
+  }
   .graphItem:nth-child(2) {
     grid-row: 2;
   }
