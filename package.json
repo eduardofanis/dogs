@@ -1,6 +1,6 @@
 {
-  "homepage": "https://fwnis.github.io/projeto-dogs",
-  "name": "projeto-dogs",
+  "homepage": "https://dogs-phi-rosy.vercel.app",
+  "name": "dogs",
   "private": true,
   "version": "0.0.0",
   "type": "module",

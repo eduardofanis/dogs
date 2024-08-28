@@ -1,21 +1,21 @@
 import React from "react";
-import "./App.css";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 import Home from "./Components/Home";
-import Login from "./Components/Login/Login";
-import { UserStorage } from "./UserContext";
-import ProtectedRoute from "./Components/Interface/ProtectedRoute";
-import User from "./Components/User/User";
-import Photo from "./Components/Photo/Photo";
-import UserProfile from "./Components/User/UserProfile";
 import NotFound from "./Components/Interface/NotFound";
+import ProtectedRoute from "./Components/Interface/ProtectedRoute";
+import Login from "./Components/Login/Login";
+import Photo from "./Components/Photo/Photo";
+import User from "./Components/User/User";
+import UserProfile from "./Components/User/UserProfile";
+import { UserStorage } from "./UserContext";
 
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter basename="/dogs">
+      <BrowserRouter>
         <UserStorage>
           <Header />
           <main className="AppBody">
